@@ -3,6 +3,7 @@ from ultralytics import YOLO
 import cv2
 import numpy as np
 import torch
+import os
 from PIL import Image
 import io
 
@@ -77,4 +78,4 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
