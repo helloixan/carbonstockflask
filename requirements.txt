@@ -6,3 +6,4 @@ torch
 torchvision
 Pillow
 numpy
+timm
