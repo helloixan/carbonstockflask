@@ -67,9 +67,9 @@ def predict():
 
             results_data.append({
                 "center": (center_x, center_y),
-                "depth_in_meters": depth_in_meters,
-                "height_actual": height_actual,
-                "carbon": carbon
+                "depth_in_meters": float(depth_in_meters),
+                "height_actual": float(height_actual),
+                "carbon": float(carbon)
             })
 
         return jsonify(results_data)
